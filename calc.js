@@ -10,7 +10,8 @@ function Rectangle(width, height) {
   this.perimeter = function() {
     return roundFractional(2 * (w + h), 2);
   };
-
+  console.log('hello world');
+  
   /**
     * 保留小数点后第 n 位
     *
@@ -70,12 +71,14 @@ function isLegalKey(key, content, pos) {
   }
 
   if(key === '.') {
+
     if(pos === 0 || content.indexOf('.') !== -1) return false;
 
     if(pos === 1 && content.substring(0,1) === '-') return false;
   }
 
   if(key === 'e') {
+    
     if(pos === 0 || content.indexOf('e') !== -1 
         || content.indexOf('E') !== -1) return false;
 
@@ -89,5 +92,6 @@ function isLegalKey(key, content, pos) {
     if(pos === 1 && content.substring(0,1) === '-') return false;
   }
 
+  
   return true;
 }
